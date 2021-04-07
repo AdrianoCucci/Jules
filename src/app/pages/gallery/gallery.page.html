@@ -3,12 +3,12 @@
 <img src="assets/images/photos/laying-with-phone.jpg" alt="person-laying-with-phone" class="fixed-background-image">
 
 <div class="gallery-container stripe-background">
-    <app-row *ngFor="let row of galleryRows">
-        <app-column *ngFor="let image of row.rowImages" h-align="center" v-align="center">
-            <app-image-view class="hover-grow" [src]="image.src" [alt]="image.alt" [caption]="image.caption"
-                [description]="image.description" (onClick)="imageModal.show($event)"></app-image-view>
-        </app-column>
-    </app-row>
+  <app-row *ngFor="let row of galleryRows">
+    <app-column *ngFor="let image of row.rowImages" h-align="center" v-align="center">
+      <app-image-view class="hover-grow" [src]="srcFolder + image.src" [alt]="image.alt" [caption]="image.caption"
+        [description]="image.description" (onClick)="imageModal.show($event)"></app-image-view>
+    </app-column>
+  </app-row>
 </div>
 
 <app-image-modal></app-image-modal>

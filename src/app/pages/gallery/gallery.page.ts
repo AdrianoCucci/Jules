@@ -10,7 +10,8 @@ import { ImageContent } from 'src/app/interfaces/image-content';
   styleUrls: ['./gallery.page.scss']
 })
 export class GalleryPage extends Page {
-  private _galleryRows: GallaryRow[];
+  private readonly _srcFolder: string = "assets/images/photos/gallery/";
+  private _galleryRows: GalleryRow[];
 
   @ViewChild(ImageModalComponent, { static: true }) public imageModal: ImageModalComponent;
 
@@ -19,81 +20,86 @@ export class GalleryPage extends Page {
 
     this._title.setTitle("Gallery");
     this.setMetaDescription("Check out these fun photos of Jules. With new music on the way, new images will be updated and added to this gallery.");
-    this.setGallaryImages();
+    this.setGalleryImages();
   }
 
-  private setGallaryImages() {
+  private setGalleryImages() {
     this._galleryRows = [
       {
         rowImages: [
-          { src: "assets/images/photos/gallery/laying-with-phone-2.jpg", alt: "person-laying-with-phone", },
-          { src: "assets/images/photos/gallery/sitting-with-phone-5.jpg", alt: "person-sitting-with-phone", },
-          { src: "assets/images/photos/gallery/sitting-with-phone-4.jpg", alt: "person-sitting-with-phone", }
+          { src: `laying-with-phone-2.jpg`, alt: `person-laying-with-phone` },
+          { src: `sitting-with-phone-5.jpg`, alt: `person-sitting-with-phone` },
+          { src: `sitting-with-phone-4.jpg`, alt: `person-sitting-with-phone` }
         ]
       },
       {
         rowImages: [
-          { src: "assets/images/photos/gallery/laying-with-phone-3.jpg", alt: "person-laying-with-phone", },
-          { src: "assets/images/photos/gallery/holding-mirror.jpg", alt: "person-holding-mirror", },
-          { src: "assets/images/photos/gallery/standing-with-glitter-2.jpeg", alt: "person-standing-with-glitter-background", }
+          { src: `laying-with-phone-3.jpg`, alt: `person-laying-with-phone` },
+          { src: `sitting-with-phone-3.jpg`, alt: `person-sitting-with-phone` },
+          { src: `looking-in-mirror.jpg`, alt: `person-looking-in-mirror` }
         ]
       },
       {
         rowImages: [
-          { src: "assets/images/photos/gallery/standing-with-glitter-4.jpeg", alt: "person-standing-with-glitter-background", },
-          { src: "assets/images/photos/gallery/sitting-with-phone-2.jpg", alt: "person-sitting-with-phone", },
-          { src: "assets/images/photos/gallery/laying-with-phone-1.jpg", alt: "person-laying-with-phone", }
+          { src: `standing-with-glitter-4.jpeg`, alt: `person-standing-with-glitter-background` },
+          { src: `sitting-with-phone-2.jpg`, alt: `person-sitting-with-phone` },
+          { src: `standing-with-glitter-3.jpeg`, alt: `person-standing-with-glitter-background` }
         ]
       },
       {
         rowImages: [
-          { src: "assets/images/photos/gallery/standing-with-phone-3.jpg", alt: "person-standing-with-phone", },
-          { src: "assets/images/photos/gallery/looking-away-1.jpg", alt: "person-looking-away", },
-          { src: "assets/images/photos/gallery/standing-with-phone-2.jpg", alt: "person-standing-with-phone", }
+          { src: `standing-with-phone-3.jpg`, alt: `person-standing-with-phone` },
+          { src: `standing-with-phone-2.jpg`, alt: `person-standing-with-phone` },
+          { src: `holding-phone-cord.jpg`, alt: `person-holding-phone-cord` }
         ]
       },
       {
         rowImages: [
-          { src: "assets/images/photos/gallery/talking-on-phone-1.jpg", alt: "person-talking-on-phone", },
-          { src: "assets/images/photos/gallery/sitting-with-phone-1.jpg", alt: "person-sitting-with-phone", },
-          { src: "assets/images/photos/gallery/holding-phone-cord.jpg", alt: "person-holding-phone-cord", }
+          { src: `posing-with-phone.jpg`, alt: `person-posing-with-phone` },
+          { src: `talking-on-phone-2.jpg`, alt: `person-talking-on-phone` },
+          { src: `sitting-1.jpg`, alt: `person-sitting` }
         ]
       },
       {
         rowImages: [
-          { src: "assets/images/photos/gallery/talking-on-phone-2.jpg", alt: "person-talking-on-phone", },
-          { src: "assets/images/photos/gallery/sitting-1.jpg", alt: "person-sitting", },
-          { src: "assets/images/photos/gallery/standing-with-phone-1.jpg", alt: "person-standing-with-phone", }
+          { src: `standing-with-glitter-1.jpeg`, alt: `person-standing-with-glitter-background` },
+          { src: `sitting-2.jpg`, alt: `person-sitting` },
+          { src: `looking-away-2.jpg`, alt: `person-looking-away` }
         ]
       },
       {
         rowImages: [
-          { src: "assets/images/photos/gallery/standing-with-glitter-1.jpeg", alt: "person-standing-with-glitter-background", },
-          { src: "assets/images/photos/gallery/sitting-2.jpg", alt: "person-sitting", },
-          { src: "assets/images/photos/gallery/standing-with-glitter-3.jpeg", alt: "person-standing-with-glitter-background", },
+          { src: `sitting-with-glitter-1.jpeg`, alt: `person-sitting-with-glitter-background` },
+          { src: `sitting-with-glitter-2.jpg`, alt: `person-sitting-with-glitter-background` },
+          { src: `flash-smiling.jpg`, alt: `person-leaning-against-wall` }
         ]
       },
       {
         rowImages: [
-          { src: "assets/images/photos/gallery/looking-away-2.jpg", alt: "person-looking-away", },
-          { src: "assets/images/photos/gallery/standing-with-glitter-5.jpg", alt: "person-standing-with-glitter-background", },
-          { src: "assets/images/photos/gallery/looking-in-mirror.jpg", alt: "person-looking-in-mirror", },
+          { src: `leaning-against-wall.jpeg`, alt: `person-leaning-against-wall` },
+          { src: `looking-away.jpg`, alt: `person-standing-and-looking-away` },
+          { src: `looking-behind.jpg`, alt: `person-standing-and-looking-behind` }
         ]
       },
       {
         rowImages: [
-          { src: "assets/images/photos/gallery/posing-with-phone.jpg", alt: "person-posing-with-phone", },
-          { src: "assets/images/photos/gallery/sitting-with-phone-3.jpg", alt: "person-sitting-with-phone", }
+          { src: `posing-with-graffiti.jpg`, alt: `person-standing-in-front-of-graffiti` },
+          { src: `standing-against-wall.jpg`, alt: `person-standing-against-wall` },
+          { src: `standing-up-bright-elbow.jpg`, alt: `person-with-elbow-against-wall` }
         ]
       }
     ];
   }
 
-  public get galleryRows(): GallaryRow[] {
+  public get srcFolder(): string {
+    return this._srcFolder;
+  }
+
+  public get galleryRows(): GalleryRow[] {
     return this._galleryRows;
   }
 }
 
-interface GallaryRow {
+interface GalleryRow {
   rowImages: ImageContent[];
 }
