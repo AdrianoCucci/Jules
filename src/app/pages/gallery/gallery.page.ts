@@ -50,7 +50,7 @@ export class GalleryPage extends Page {
         rowImages: [
           { src: `sitting-1.jpg`, alt: `person-sitting` },
           { src: `standing-with-phone-3.jpg`, alt: `person-standing-with-phone` },
-          { src: `posing-with-phone.jpg`, alt: `person-posing-with-phone` },
+          { src: `standing-with-phone-2.jpg`, alt: `person-standing-with-phone` }
         ]
       },
       {
@@ -76,7 +76,7 @@ export class GalleryPage extends Page {
       },
       {
         rowImages: [
-          { src: `standing-with-phone-2.jpg`, alt: `person-standing-with-phone` },
+          { src: `posing-with-phone.jpg`, alt: `person-posing-with-phone` },
           { src: `sitting-with-phone-5.jpg`, alt: `person-sitting-with-phone` },
           { src: `sitting-with-phone-4.jpg`, alt: `person-sitting-with-phone` }
         ]
