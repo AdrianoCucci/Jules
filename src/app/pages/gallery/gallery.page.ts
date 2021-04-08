@@ -27,43 +27,29 @@ export class GalleryPage extends Page {
     this._galleryRows = [
       {
         rowImages: [
-          { src: `laying-with-phone-2.jpg`, alt: `person-laying-with-phone` },
-          { src: `sitting-with-phone-5.jpg`, alt: `person-sitting-with-phone` },
-          { src: `sitting-with-phone-4.jpg`, alt: `person-sitting-with-phone` }
+          { src: `leaning-against-wall.jpeg`, alt: `person-leaning-against-wall` },
+          { src: `posing-with-graffiti.jpg`, alt: `person-standing-in-front-of-graffiti` },
+          { src: `flash-smiling.jpg`, alt: `person-leaning-against-wall` }
         ]
       },
       {
         rowImages: [
           { src: `laying-with-phone-3.jpg`, alt: `person-laying-with-phone` },
-          { src: `sitting-with-phone-3.jpg`, alt: `person-sitting-with-phone` },
+          { src: `laying-with-phone-2.jpg`, alt: `person-laying-with-phone` },
           { src: `looking-in-mirror.jpg`, alt: `person-looking-in-mirror` }
         ]
       },
       {
         rowImages: [
           { src: `standing-with-glitter-4.jpeg`, alt: `person-standing-with-glitter-background` },
-          { src: `sitting-with-phone-2.jpg`, alt: `person-sitting-with-phone` },
+          { src: `standing-against-wall.jpg`, alt: `person-standing-against-wall` },
           { src: `standing-with-glitter-3.jpeg`, alt: `person-standing-with-glitter-background` }
         ]
       },
       {
         rowImages: [
-          { src: `standing-with-phone-3.jpg`, alt: `person-standing-with-phone` },
-          { src: `standing-with-phone-2.jpg`, alt: `person-standing-with-phone` },
-          { src: `holding-phone-cord.jpg`, alt: `person-holding-phone-cord` }
-        ]
-      },
-      {
-        rowImages: [
-          { src: `posing-with-phone.jpg`, alt: `person-posing-with-phone` },
-          { src: `talking-on-phone-2.jpg`, alt: `person-talking-on-phone` },
-          { src: `sitting-1.jpg`, alt: `person-sitting` }
-        ]
-      },
-      {
-        rowImages: [
-          { src: `standing-with-glitter-1.jpeg`, alt: `person-standing-with-glitter-background` },
-          { src: `sitting-2.jpg`, alt: `person-sitting` },
+          { src: `looking-behind.jpg`, alt: `person-standing-and-looking-behind` },
+          { src: `sitting-1.jpg`, alt: `person-sitting` },
           { src: `looking-away-2.jpg`, alt: `person-looking-away` }
         ]
       },
@@ -71,21 +57,35 @@ export class GalleryPage extends Page {
         rowImages: [
           { src: `sitting-with-glitter-1.jpeg`, alt: `person-sitting-with-glitter-background` },
           { src: `sitting-with-glitter-2.jpg`, alt: `person-sitting-with-glitter-background` },
-          { src: `flash-smiling.jpg`, alt: `person-leaning-against-wall` }
-        ]
-      },
-      {
-        rowImages: [
-          { src: `leaning-against-wall.jpeg`, alt: `person-leaning-against-wall` },
-          { src: `looking-away.jpg`, alt: `person-standing-and-looking-away` },
-          { src: `looking-behind.jpg`, alt: `person-standing-and-looking-behind` }
-        ]
-      },
-      {
-        rowImages: [
-          { src: `posing-with-graffiti.jpg`, alt: `person-standing-in-front-of-graffiti` },
-          { src: `standing-against-wall.jpg`, alt: `person-standing-against-wall` },
           { src: `standing-up-bright-elbow.jpg`, alt: `person-with-elbow-against-wall` }
+        ]
+      },
+      {
+        rowImages: [
+          { src: `standing-with-glitter-1.jpeg`, alt: `person-standing-with-glitter-background` },
+          { src: `sitting-2.jpg`, alt: `person-sitting` },
+          { src: `looking-away.jpg`, alt: `person-standing-and-looking-away` }
+        ]
+      },
+      {
+        rowImages: [
+          { src: `holding-phone-cord.jpg`, alt: `person-holding-phone-cord` },
+          { src: `standing-with-phone-2.jpg`, alt: `person-standing-with-phone` },
+          { src: `sitting-with-phone-5.jpg`, alt: `person-sitting-with-phone` },
+        ]
+      },
+      {
+        rowImages: [
+          { src: `sitting-with-phone-4.jpg`, alt: `person-sitting-with-phone` },
+          { src: `sitting-with-phone-3.jpg`, alt: `person-sitting-with-phone` },
+          { src: `sitting-with-phone-2.jpg`, alt: `person-sitting-with-phone` }
+        ]
+      },
+      {
+        rowImages: [
+          { src: `standing-with-phone-3.jpg`, alt: `person-standing-with-phone` },
+          { src: `posing-with-phone.jpg`, alt: `person-posing-with-phone` },
+          { src: `talking-on-phone-2.jpg`, alt: `person-talking-on-phone` }
         ]
       }
     ];
