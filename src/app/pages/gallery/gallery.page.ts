@@ -34,15 +34,15 @@ export class GalleryPage extends Page {
       },
       {
         rowImages: [
-          { src: `laying-with-phone-3.jpg`, alt: `person-laying-with-phone` },
-          { src: `laying-with-phone-2.jpg`, alt: `person-laying-with-phone` },
-          { src: `looking-in-mirror.jpg`, alt: `person-looking-in-mirror` }
+          { src: `leaning-against-wall.jpeg`, alt: `person-leaning-against-wall` },
+          { src: `standing-against-wall.jpg`, alt: `person-standing-against-wall` },
+          { src: `laying-with-phone-3.jpg`, alt: `person-laying-with-phone` }
         ]
       },
       {
         rowImages: [
-          { src: `leaning-against-wall.jpeg`, alt: `person-leaning-against-wall` },
-          { src: `standing-against-wall.jpg`, alt: `person-standing-against-wall` },
+          { src: `laying-with-phone-2.jpg`, alt: `person-laying-with-phone` },
+          { src: `looking-in-mirror.jpg`, alt: `person-looking-in-mirror` },
           { src: `standing-with-glitter-3.jpeg`, alt: `person-standing-with-glitter-background` }
         ]
       },
