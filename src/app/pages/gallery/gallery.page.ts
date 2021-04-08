@@ -27,8 +27,8 @@ export class GalleryPage extends Page {
     this._galleryRows = [
       {
         rowImages: [
-          { src: `leaning-against-wall.jpeg`, alt: `person-leaning-against-wall` },
-          { src: `posing-with-graffiti.jpg`, alt: `person-standing-in-front-of-graffiti` },
+          { src: `standing-with-glitter-4.jpeg`, alt: `person-standing-with-glitter-background` },
+          { src: `sitting-1.jpg`, alt: `person-sitting` },
           { src: `flash-smiling.jpg`, alt: `person-leaning-against-wall` }
         ]
       },
@@ -41,14 +41,14 @@ export class GalleryPage extends Page {
       },
       {
         rowImages: [
-          { src: `standing-with-glitter-4.jpeg`, alt: `person-standing-with-glitter-background` },
+          { src: `leaning-against-wall.jpeg`, alt: `person-leaning-against-wall` },
           { src: `standing-against-wall.jpg`, alt: `person-standing-against-wall` },
           { src: `standing-with-glitter-3.jpeg`, alt: `person-standing-with-glitter-background` }
         ]
       },
       {
         rowImages: [
-          { src: `sitting-1.jpg`, alt: `person-sitting` },
+          { src: `posing-with-graffiti.jpg`, alt: `person-standing-in-front-of-graffiti` },
           { src: `standing-with-phone-3.jpg`, alt: `person-standing-with-phone` },
           { src: `standing-with-phone-2.jpg`, alt: `person-standing-with-phone` }
         ]
