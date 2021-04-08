@@ -48,43 +48,43 @@ export class GalleryPage extends Page {
       },
       {
         rowImages: [
-          { src: `looking-behind.jpg`, alt: `person-standing-and-looking-behind` },
           { src: `sitting-1.jpg`, alt: `person-sitting` },
-          { src: `looking-away-2.jpg`, alt: `person-looking-away` }
-        ]
-      },
-      {
-        rowImages: [
-          { src: `sitting-with-glitter-1.jpeg`, alt: `person-sitting-with-glitter-background` },
-          { src: `sitting-with-glitter-2.jpg`, alt: `person-sitting-with-glitter-background` },
-          { src: `standing-up-bright-elbow.jpg`, alt: `person-with-elbow-against-wall` }
-        ]
-      },
-      {
-        rowImages: [
-          { src: `standing-with-glitter-1.jpeg`, alt: `person-standing-with-glitter-background` },
-          { src: `sitting-2.jpg`, alt: `person-sitting` },
-          { src: `looking-away.jpg`, alt: `person-standing-and-looking-away` }
-        ]
-      },
-      {
-        rowImages: [
-          { src: `holding-phone-cord.jpg`, alt: `person-holding-phone-cord` },
-          { src: `standing-with-phone-2.jpg`, alt: `person-standing-with-phone` },
-          { src: `sitting-with-phone-5.jpg`, alt: `person-sitting-with-phone` },
-        ]
-      },
-      {
-        rowImages: [
-          { src: `sitting-with-phone-4.jpg`, alt: `person-sitting-with-phone` },
-          { src: `sitting-with-phone-3.jpg`, alt: `person-sitting-with-phone` },
-          { src: `sitting-with-phone-2.jpg`, alt: `person-sitting-with-phone` }
-        ]
-      },
-      {
-        rowImages: [
           { src: `standing-with-phone-3.jpg`, alt: `person-standing-with-phone` },
           { src: `posing-with-phone.jpg`, alt: `person-posing-with-phone` },
+        ]
+      },
+      {
+        rowImages: [
+          { src: `looking-behind.jpg`, alt: `person-standing-and-looking-behind` },
+          { src: `looking-away-2.jpg`, alt: `person-looking-away` },
+          { src: `sitting-with-glitter-1.jpeg`, alt: `person-sitting-with-glitter-background` }
+        ]
+      },
+      {
+        rowImages: [
+          { src: `sitting-with-glitter-2.jpg`, alt: `person-sitting-with-glitter-background` },
+          { src: `standing-up-bright-elbow.jpg`, alt: `person-with-elbow-against-wall` },
+          { src: `standing-with-glitter-1.jpeg`, alt: `person-standing-with-glitter-background` },
+        ]
+      },
+      {
+        rowImages: [
+          { src: `sitting-2.jpg`, alt: `person-sitting` },
+          { src: `looking-away.jpg`, alt: `person-standing-and-looking-away` },
+          { src: `holding-phone-cord.jpg`, alt: `person-holding-phone-cord` },
+        ]
+      },
+      {
+        rowImages: [
+          { src: `standing-with-phone-2.jpg`, alt: `person-standing-with-phone` },
+          { src: `sitting-with-phone-5.jpg`, alt: `person-sitting-with-phone` },
+          { src: `sitting-with-phone-4.jpg`, alt: `person-sitting-with-phone` }
+        ]
+      },
+      {
+        rowImages: [
+          { src: `sitting-with-phone-3.jpg`, alt: `person-sitting-with-phone` },
+          { src: `sitting-with-phone-2.jpg`, alt: `person-sitting-with-phone` },
           { src: `talking-on-phone-2.jpg`, alt: `person-talking-on-phone` }
         ]
       }
