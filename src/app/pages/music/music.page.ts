@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Page } from '../page';
 import { Title, Meta } from '@angular/platform-browser';
-import { SpotifySource, SpotifySourcesService } from 'src/app/services/spotify-urls.service';
+import { SpotifySource, SpotifyEmbedService } from 'src/app/services/spotify-embed-service';
 
 @Component({
   selector: 'app-music-page',
@@ -11,7 +11,7 @@ import { SpotifySource, SpotifySourcesService } from 'src/app/services/spotify-u
 export class MusicPage extends Page {
   public readonly spotifySources: SpotifySource[];
 
-  public constructor(title: Title, meta: Meta, spotifyService: SpotifySourcesService) {
+  public constructor(title: Title, meta: Meta, spotifyService: SpotifyEmbedService) {
     super(title, meta);
 
     this._title.setTitle("Music");

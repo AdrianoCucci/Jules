@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SpotifySource, SpotifySourcesService } from 'src/app/services/spotify-urls.service';
+import { SpotifySource, SpotifyEmbedService } from 'src/app/services/spotify-embed-service';
 
 @Component({
   selector: 'app-spotify-embed-list',
@@ -8,7 +8,7 @@ import { SpotifySource, SpotifySourcesService } from 'src/app/services/spotify-u
 })
 export class SpotifyEmbedListComponent {
   public readonly spotifySources: SpotifySource[];
-  constructor(spotifyService: SpotifySourcesService) {
+  constructor(spotifyService: SpotifyEmbedService) {
     this.spotifySources = spotifyService.sources
   }
 }

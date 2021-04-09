@@ -6,7 +6,7 @@ const IMG_SRC_FOLDER: string = "assets/images/album-covers";
 @Injectable({
   providedIn: 'root'
 })
-export class SpotifySourcesService {
+export class SpotifyEmbedService {
   public readonly sources: SpotifySource[] = [
     {
       url: "https://open.spotify.com/embed/track/6PogkqYpaWV2bW1pVRNs8s",
