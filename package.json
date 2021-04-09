@@ -6,7 +6,6 @@
     "ng": "ng",
     "build": "ng build",
     "start": "ng serve",
-    "start:l": "ng serve --live-reload",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
