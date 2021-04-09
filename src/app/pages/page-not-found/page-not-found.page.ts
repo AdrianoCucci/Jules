@@ -10,6 +10,6 @@ import { Page } from '../page';
 export class PageNotFoundPage extends Page {
   public constructor(title: Title, meta: Meta) {
     super(title, meta);
-    this._title.setTitle("Page Not Found");
+    this.setTitle("Page Not Found");
   }
 }

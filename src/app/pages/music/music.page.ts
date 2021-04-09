@@ -14,7 +14,7 @@ export class MusicPage extends Page {
   public constructor(title: Title, meta: Meta, spotifyService: SpotifyEmbedService) {
     super(title, meta);
 
-    this._title.setTitle("Music");
+    this.setTitle("Music");
     this.setMetaDescription("Stream Jules' first single, \"Don't Wanna Be\", available now on all streaming platforms. Links can be found here! New music is dropping from Jules very soon!");
     this.spotifySources = spotifyService.sources;
   }

@@ -18,7 +18,7 @@ export class GalleryPage extends Page {
   public constructor(title: Title, meta: Meta) {
     super(title, meta);
 
-    this._title.setTitle("Gallery");
+    this.setTitle("Gallery");
     this.setMetaDescription("Check out these fun photos of Jules. With new music on the way, new images will be updated and added to this gallery.");
     this.setGalleryImages();
   }

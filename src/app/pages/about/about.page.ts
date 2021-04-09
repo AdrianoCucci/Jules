@@ -11,7 +11,7 @@ export class AboutPage extends Page {
   public constructor(title: Title, meta: Meta) {
     super(title, meta);
 
-    this._title.setTitle("About");
+    this.setTitle("About");
     this.setMetaDescription("Get to know more about Jules, her life growing up, and most importantly, her love and passion for music and entertaining!");
   }
 }

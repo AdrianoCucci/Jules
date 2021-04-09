@@ -12,6 +12,11 @@ export abstract class Page {
     this._meta.addTag({ name: "description" });
   }
 
+  protected setTitle(title: string) {
+    title = !title ? "Jules" : `Jules - ${title}`;
+    this._title.setTitle(title);
+  }
+
   protected setMetaDescription(description: string) {
     this._meta.updateTag({ name: "description", content: description });
   }
