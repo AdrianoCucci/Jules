@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Page } from '../page';
 import { Title, Meta } from '@angular/platform-browser';
+import { SpotifySource, SpotifySourcesService } from 'src/app/services/spotify-urls.service';
 
 @Component({
   selector: 'app-music-page',
@@ -8,10 +9,13 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrls: ['./music.page.scss']
 })
 export class MusicPage extends Page {
-  public constructor(title: Title, meta: Meta) {
+  public readonly spotifySources: SpotifySource[];
+
+  public constructor(title: Title, meta: Meta, spotifyService: SpotifySourcesService) {
     super(title, meta);
 
     this._title.setTitle("Music");
     this.setMetaDescription("Stream Jules' first single, \"Don't Wanna Be\", available now on all streaming platforms. Links can be found here! New music is dropping from Jules very soon!");
+    this.spotifySources = spotifyService.sources;
   }
 }

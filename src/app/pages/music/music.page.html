@@ -1,35 +1,25 @@
 <app-header heading="Music"></app-header>
 
 <img src="assets/images/photos/standing-with-phone-2.jpg" alt="person-standing-with-phone"
-    class="fixed-background-image">
+  class="fixed-background-image">
 
 <app-row class="padding">
-    <app-column h-align="center" v-align="center">
-        <div class="song-showcase latest hover-grow">
-            <span class="text-shadow-fade latest-text">Latest Release!</span>
+  <app-column h-align="center" v-align="center">
+    <div *ngFor="let source of spotifySources; index as i;" class="song-showcase hover-grow"
+      [ngClass]="{'latest': i === 0}">
 
-            <div class="image-wrapper box-shadow-fade">
-                <img src="assets/images/album-covers/this-love.jpg" alt="this-love-album-cover">
-            </div>
-            <div class="content-wrapper">
-                <h2 class="title text-shadow-fade">This Love</h2>
-                <div class="spotify-embed-wrapper box-shadow-fade">
-                    <iframe src="https://open.spotify.com/embed/track/1WSvbMs1Q1JFLGsyvAmZDa" frameborder="0"
-                        allowtransparency="true" allow="encrypted-media"></iframe>
-                </div>
-            </div>
+      <span *ngIf="i === 0" class="text-shadow-fade latest-text">Latest Release!</span>
+
+      <div class="image-wrapper box-shadow-fade">
+        <img [src]="source.imageUrl" [alt]="source.title + ' album cover'">
+      </div>
+
+      <div class="content-wrapper">
+        <h2 class="title text-shadow-fade">{{source.title}}</h2>
+        <div class="spotify-embed-wrapper box-shadow-fade">
+          <iframe [src]="source.url" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
-        <div class="song-showcase hover-grow">
-            <div class="image-wrapper box-shadow-fade">
-                <img src="assets/images/album-covers/dont-wanna-be.jpg" alt="dont-wanna-be-album-cover">
-            </div>
-            <div class="content-wrapper">
-                <h2 class="title text-shadow-fade">Don't Wanna Be</h2>
-                <div class="spotify-embed-wrapper box-shadow-fade">
-                    <iframe src="https://open.spotify.com/embed/track/4PjA8d9XMZvyvlK4gf1amF" frameborder="0"
-                        allowtransparency="true" allow="encrypted-media"></iframe>
-                </div>
-            </div>
-        </div>
-    </app-column>
+      </div>
+    </div>
+  </app-column>
 </app-row>

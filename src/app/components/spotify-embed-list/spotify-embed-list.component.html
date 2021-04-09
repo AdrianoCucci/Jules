@@ -1,4 +1,2 @@
-<iframe src="https://open.spotify.com/embed/track/1WSvbMs1Q1JFLGsyvAmZDa" frameborder="0" allowtransparency="true"
-    allow="encrypted-media"></iframe>
-<iframe src="https://open.spotify.com/embed/track/4PjA8d9XMZvyvlK4gf1amF" frameborder="0" allowtransparency="true"
-    allow="encrypted-media"></iframe>
+<iframe *ngFor="let source of spotifySources" [src]="source.url" frameborder="0" allowtransparency="true"
+  allow="encrypted-media"></iframe>
