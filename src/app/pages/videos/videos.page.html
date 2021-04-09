@@ -2,30 +2,12 @@
 
 <img src="assets/images/photos/gallery/sitting-2.jpg" alt="person-sitting-with-phone" class="fixed-background-image">
 
-<app-row>
+<app-row *ngFor="let url of youTubeUrls">
   <app-column class="padding">
     <div class="embed box-shadow-fade hover-grow">
-      <iframe src="https://www.youtube.com/embed/AknXzVv61MY" frameborder="0"
+      <iframe [src]="url" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
-    </div>
-  </app-column>
-</app-row>
-
-<app-row>
-  <app-column class="padding">
-    <div class="embed box-shadow-fade hover-grow">
-      <iframe src="https://www.youtube.com/embed/WnGPKwgSJJg" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </app-column>
-</app-row>
-
-<app-row>
-  <app-column class="padding">
-    <div class="embed box-shadow-fade hover-grow">
-      <iframe src="https://www.youtube.com/embed/LRTeD0X4vU0" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </app-column>
 </app-row>
