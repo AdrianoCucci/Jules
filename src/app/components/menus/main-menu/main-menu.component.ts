@@ -6,7 +6,7 @@ import { faHome, faMusic, faStar, faImages, faVideo, faShoppingBag, IconDefiniti
   templateUrl: './main-menu.component.html',
   styleUrls: ['./main-menu.component.scss']
 })
-export class MainMenuComponent { 
+export class MainMenuComponent {
   public readonly iconHome: IconDefinition = faHome;
   public readonly iconMusic: IconDefinition = faMusic;
   public readonly iconAbout: IconDefinition = faStar;

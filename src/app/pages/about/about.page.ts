@@ -7,7 +7,7 @@ import { Title, Meta } from '@angular/platform-browser';
   templateUrl: './about.page.html',
   styleUrls: ['./about.page.scss']
 })
-export class AboutPage extends Page  {
+export class AboutPage extends Page {
   public constructor(title: Title, meta: Meta) {
     super(title, meta);
 

@@ -1,13 +1,13 @@
 <div class="images-container">
-    <ng-content></ng-content>
+  <ng-content></ng-content>
 </div>
 
 <div *ngIf="arrows" class="arrows-container">
-    <button class="arrow-btn-left" (click)="prevImage()">
-        <fa-icon [icon]="buttonIcon" size="4x"></fa-icon>
-    </button>
-    <button class="arrow-btn-right" (click)="nextImage()">
-        <fa-icon [icon]="buttonIcon" size="4x" flip="horizontal">
-        </fa-icon>
-    </button>
+  <button class="arrow-btn-left" (click)="prevImage()">
+    <fa-icon [icon]="buttonIcon" size="4x"></fa-icon>
+  </button>
+  <button class="arrow-btn-right" (click)="nextImage()">
+    <fa-icon [icon]="buttonIcon" size="4x" flip="horizontal">
+    </fa-icon>
+  </button>
 </div>

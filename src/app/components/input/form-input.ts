@@ -3,50 +3,50 @@ import { Input, HostBinding, OnInit, Output, EventEmitter, Directive } from '@an
 
 @Directive()
 export abstract class FormInput<T> extends AppInput implements OnInit {
-    @Input() public required: boolean;
+  @Input() public required: boolean;
 
-    protected _value: T;
+  protected _value: T;
 
-    @Output() public readonly valueChange: EventEmitter<T>;
+  @Output() public readonly valueChange: EventEmitter<T>;
 
-    @HostBinding("class.invalid") private _invalid: boolean;
+  @HostBinding("class.invalid") private _invalid: boolean;
 
-    protected _error: string;
+  protected _error: string;
 
-    public constructor(type?: string, value?: T) {
-        super(type);
-        this._value = value;
+  public constructor(type?: string, value?: T) {
+    super(type);
+    this._value = value;
 
-        this.required = false;
-        this.valueChange = new EventEmitter<T>();
+    this.required = false;
+    this.valueChange = new EventEmitter<T>();
+  }
+
+  ngOnInit() {
+    super.ngOnInit();
+
+    if(!this.required) {
+      this.required = String(this.required) !== "false";
     }
+  }
 
-    ngOnInit() {
-        super.ngOnInit();
+  public validate(): boolean {
+    let isValid: boolean = this.onValidate();
 
-        if(!this.required) {
-            this.required = String(this.required) !== "false";
-        }
-    }
+    this._invalid = !isValid;
+    return isValid;
+  }
 
-    public validate(): boolean {
-        let isValid: boolean = this.onValidate();
+  protected abstract onValidate(): boolean;
 
-        this._invalid = !isValid;
-        return isValid;
-    }
+  public get value(): T {
+    return this._value;
+  }
+  @Input() public set value(value: T) {
+    this._value = value;
+    this.valueChange.emit(value);
+  }
 
-    protected abstract onValidate(): boolean;
-
-    public get value(): T {
-        return this._value;
-    }
-    @Input() public set value(value: T) {
-        this._value = value;
-        this.valueChange.emit(value);
-    }
-
-    public get error(): string {
-        return this._error;
-    }
+  public get error(): string {
+    return this._error;
+  }
 }

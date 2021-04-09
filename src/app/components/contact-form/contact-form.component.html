@@ -1,17 +1,17 @@
 <h3 class="heading">Contact</h3>
 
 <form (ngSubmit)="onFormSubmit()" method="POST" action="./send-mail.php">
-    <app-text-input #field type="email" label="Email" required block rounded outlined name="cf-email"
-        [(value)]="contactForm.email">
-    </app-text-input>
+  <app-text-input #field type="email" label="Email" required block rounded outlined name="cf-email"
+    [(value)]="contactForm.email">
+  </app-text-input>
 
-    <app-text-area #field inputId="cf-message" label="Message" required block rounded outlined name="cf-message"
-        [(value)]="contactForm.message"></app-text-area>
+  <app-text-area #field inputId="cf-message" label="Message" required block rounded outlined name="cf-message"
+    [(value)]="contactForm.message"></app-text-area>
 
-    <app-button type="submit" block rounded [disabled]="emailing">
-        <fa-icon [icon]="submitBtnIcon" [spin]="emailing"></fa-icon>
-        <span>{{emailing ? 'SENDING...' : 'SEND'}}</span>
-    </app-button>
+  <app-button type="submit" block rounded [disabled]="emailing">
+    <fa-icon [icon]="submitBtnIcon" [spin]="emailing"></fa-icon>
+    <span>{{emailing ? 'SENDING...' : 'SEND'}}</span>
+  </app-button>
 
-    <span class="submit-result">{{emailSentResult}}</span>
+  <span class="submit-result">{{emailSentResult}}</span>
 </form>
