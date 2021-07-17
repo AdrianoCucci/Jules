@@ -6,6 +6,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class YouTubeEmbedService {
   public readonly sources: string[] | SafeResourceUrl[] = [
+    "https://www.youtube.com/embed/RVkbzx6xk38",
     "https://www.youtube.com/embed/ZtCZfWioDrY",
     "https://www.youtube.com/embed/AknXzVv61MY",
     "https://www.youtube.com/embed/WnGPKwgSJJg",
