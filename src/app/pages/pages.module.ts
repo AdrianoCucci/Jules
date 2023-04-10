@@ -15,16 +15,12 @@ const pages = [
   AboutPage,
   VideosPage,
   GalleryPage,
-  PageNotFoundPage
+  PageNotFoundPage,
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ComponentsModule,
-    HttpClientModule
-  ],
+  imports: [CommonModule, ComponentsModule, HttpClientModule],
   declarations: pages,
   exports: pages,
 })
-export class PagesModule { }
+export class PagesModule {}

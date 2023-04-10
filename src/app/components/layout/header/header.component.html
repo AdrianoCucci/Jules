@@ -1,6 +1,9 @@
 <header>
   <div class="content">
-    <h1 *ngIf="heading">{{headingSansLastChar}}<span class="last-char">{{headingLastChar}}</span></h1>
-    <span *ngIf="tagline" class="tagline">{{tagline}}</span>
+    <h1 *ngIf="heading">
+      {{ headingSansLastChar
+      }}<span class="last-char">{{ headingLastChar }}</span>
+    </h1>
+    <span *ngIf="tagline" class="tagline">{{ tagline }}</span>
   </div>
 </header>

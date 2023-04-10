@@ -1,13 +1,20 @@
 <app-header heading="Videos"></app-header>
 
-<img src="assets/images/photos/gallery/sitting-2.jpg" alt="person-sitting-with-phone" class="fixed-background-image">
+<img
+  src="assets/images/photos/gallery/sitting-2.jpg"
+  alt="person-sitting-with-phone"
+  class="fixed-background-image"
+/>
 
 <app-row *ngFor="let url of youTubeUrls">
   <app-column class="padding">
     <div class="embed box-shadow-fade hover-grow">
-      <iframe [src]="url" frameborder="0"
+      <iframe
+        [src]="url"
+        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+        allowfullscreen
+      ></iframe>
     </div>
   </app-column>
 </app-row>

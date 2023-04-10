@@ -1,4 +1,9 @@
-<label *ngIf="label !== ''">{{label}}</label>
-<textarea [required]="required" [placeholder]="placeholder" [(ngModel)]="value" (focus)="raisedLabel = true"
-    (blur)="raisedLabel = !(value === '')"></textarea>
-<span class="error">{{error}}</span>
+<label *ngIf="label !== ''">{{ label }}</label>
+<textarea
+  [required]="required"
+  [placeholder]="placeholder"
+  [(ngModel)]="value"
+  (focus)="raisedLabel = true"
+  (blur)="raisedLabel = !(value === '')"
+></textarea>
+<span class="error">{{ error }}</span>

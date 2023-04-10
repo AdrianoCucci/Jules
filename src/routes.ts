@@ -7,11 +7,11 @@ import { GalleryPage } from './app/pages/gallery/gallery.page';
 import { PageNotFoundPage } from './app/pages/page-not-found/page-not-found.page';
 
 export const ROUTES: Route[] = [
-    { path: "", component: HomePage, pathMatch: "full" },
-    { path: "music", component: MusicPage },
-    { path: "about", component: AboutPage },
-    { path: "videos", component: VideosPage },
-    { path: "gallery", component: GalleryPage },
-    { path: "home", redirectTo: "" },
-    { path: "**", component: PageNotFoundPage }
+  { path: '', component: HomePage, pathMatch: 'full' },
+  { path: 'music', component: MusicPage },
+  { path: 'about', component: AboutPage },
+  { path: 'videos', component: VideosPage },
+  { path: 'gallery', component: GalleryPage },
+  { path: 'home', redirectTo: '' },
+  { path: '**', component: PageNotFoundPage },
 ];

@@ -4,6 +4,6 @@ import { ROUTES } from 'src/routes';
 
 @NgModule({
   imports: [RouterModule.forRoot(ROUTES)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

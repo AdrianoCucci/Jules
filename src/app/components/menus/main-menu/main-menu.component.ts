@@ -1,10 +1,18 @@
 import { Component } from '@angular/core';
-import { faHome, faMusic, faStar, faImages, faVideo, faShoppingBag, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import {
+  faHome,
+  faMusic,
+  faStar,
+  faImages,
+  faVideo,
+  faShoppingBag,
+  IconDefinition,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-main-menu',
   templateUrl: './main-menu.component.html',
-  styleUrls: ['./main-menu.component.scss']
+  styleUrls: ['./main-menu.component.scss'],
 })
 export class MainMenuComponent {
   public readonly iconHome: IconDefinition = faHome;

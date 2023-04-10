@@ -5,13 +5,13 @@ import { ImageContent } from 'src/app/interfaces/image-content';
 @Component({
   selector: 'app-image-modal',
   templateUrl: './image-modal.component.html',
-  styleUrls: ['./image-modal.component.scss']
+  styleUrls: ['./image-modal.component.scss'],
 })
 export class ImageModalComponent extends ImageComponent {
-  @HostBinding("class.visible") public visible: boolean;
+  @HostBinding('class.visible') public visible: boolean = false;
 
   public show(imageContent?: ImageContent) {
-    if(imageContent) {
+    if (imageContent) {
       this.src = imageContent.src;
       this.alt = imageContent.alt;
       this.caption = imageContent.caption;
@@ -20,7 +20,7 @@ export class ImageModalComponent extends ImageComponent {
     this.visible = true;
   }
 
-  @HostListener("click") public hide() {
+  @HostListener('click') public hide() {
     this.visible = false;
   }
 }

@@ -5,7 +5,7 @@ import { ImageContent } from 'src/app/interfaces/image-content';
 @Component({
   selector: 'app-image-view',
   templateUrl: './image-view.component.html',
-  styleUrls: ['./image-view.component.scss']
+  styleUrls: ['./image-view.component.scss'],
 })
 export class ImageViewComponent extends ImageComponent {
   @Output() public readonly onClick: EventEmitter<ImageContent>;
@@ -15,7 +15,7 @@ export class ImageViewComponent extends ImageComponent {
     this.onClick = new EventEmitter<ImageContent>();
   }
 
-  @HostListener("click") private emitOnClick() {
+  @HostListener('click') private emitOnClick() {
     this.onClick.emit(this);
   }
 }
