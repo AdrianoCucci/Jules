@@ -1,7 +1,17 @@
-<a *ngIf="href && !routerLink" class="link-button" [href]="href" [target]="target">
+<a
+  *ngIf="href && !routerLink"
+  class="link-button"
+  [href]="href"
+  [target]="target"
+>
   <ng-template [ngTemplateOutlet]="template"></ng-template>
 </a>
-<a *ngIf="routerLink" class="link-button" [routerLink]="routerLink" [target]="target">
+<a
+  *ngIf="routerLink"
+  class="link-button"
+  [routerLink]="routerLink"
+  [target]="target"
+>
   <ng-template [ngTemplateOutlet]="template"></ng-template>
 </a>
 

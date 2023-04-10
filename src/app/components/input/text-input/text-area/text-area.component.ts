@@ -4,6 +4,6 @@ import { TextInputComponent } from '../text-input.component';
 @Component({
   selector: 'app-text-area',
   templateUrl: './text-area.component.html',
-  styleUrls: ['./text-area.component.scss']
+  styleUrls: ['./text-area.component.scss'],
 })
-export class TextAreaComponent extends TextInputComponent { }
+export class TextAreaComponent extends TextInputComponent {}

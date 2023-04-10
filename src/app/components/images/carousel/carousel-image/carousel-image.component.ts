@@ -4,55 +4,78 @@ import { ImageComponent } from '../../image-component';
 @Component({
   selector: 'app-carousel-image',
   templateUrl: './carousel-image.component.html',
-  styleUrls: ['./carousel-image.component.scss']
+  styleUrls: ['./carousel-image.component.scss'],
 })
 export class CarouselImageComponent extends ImageComponent {
-  @Input() @HostBinding("attr.in-animation") public inAnimation: Animation;
-  @Input() @HostBinding("attr.out-animation") public outAnimation: Animation;
+  @Input() @HostBinding('attr.in-animation') public inAnimation: Animation =
+    'cut';
+  @Input() @HostBinding('attr.out-animation') public outAnimation: Animation =
+    'cut';
 
-  @HostBinding("class.active") private _classActive: boolean;
-  @HostBinding("class.exiting") private _classExiting: boolean;
+  @HostBinding('class.active') private _active: boolean = false;
+  @HostBinding('class.exiting') private _exiting: boolean = false;
 
-  @HostBinding("class.in-l") private _classInL: boolean;
-  @HostBinding("class.out-l") private _classOutL: boolean;
-  @HostBinding("class.in-r") private _classInR: boolean;
-  @HostBinding("class.out-r") private _classOutR: boolean;
+  @HostBinding('class.in-l') private _inL: boolean = false;
+  @HostBinding('class.out-l') private _outL: boolean = false;
+  @HostBinding('class.in-r') private _inR: boolean = false;
+  @HostBinding('class.out-r') private _outR: boolean = false;
 
-  private _exitTimeout: NodeJS.Timeout;
+  private _exitTimeout?: number;
 
-  public constructor() {
-    super();
-    this.inAnimation = "cut";
-    this.outAnimation = "cut";
-  }
+  public animateIn(value: 'left' | 'right') {
+    this._active = true;
 
-  public animateIn(value: "left" | "right") {
-    this._classActive = true;
+    this._inL = value === 'left';
+    this._inR = value === 'right';
 
-    this._classInL = value === "left";
-    this._classInR = value === "right";
+    this._outL = false;
+    this._outR = false;
 
-    this._classOutL = false;
-    this._classOutR = false;
-
-    this._classExiting = false;
+    this._exiting = false;
     clearTimeout(this._exitTimeout);
   }
 
-  public animateOut(value: "left" | "right") {
-    this._classActive = false;
+  public animateOut(value: 'left' | 'right') {
+    this._active = false;
 
-    this._classOutL = value === "left";
-    this._classOutR = value === "right";
+    this._outL = value === 'left';
+    this._outR = value === 'right';
 
-    this._classInL = false;
-    this._classInR = false;
+    this._inL = false;
+    this._inR = false;
 
-    if(this.outAnimation !== "cut") {
-      this._classExiting = true;
-      this._exitTimeout = setTimeout(() => this._classExiting = false, 1000);
+    if (this.outAnimation !== 'cut') {
+      this._exiting = true;
+      this._exitTimeout = window.setTimeout(
+        () => (this._exiting = false),
+        1000
+      );
     }
+  }
+
+  public get active(): boolean {
+    return this._active;
+  }
+
+  public get exiting(): boolean {
+    return this._exiting;
+  }
+
+  public get outL(): boolean {
+    return this._outL;
+  }
+
+  public get outR(): boolean {
+    return this._outR;
+  }
+
+  public get inL(): boolean {
+    return this._inL;
+  }
+
+  public get inR(): boolean {
+    return this._inR;
   }
 }
 
-type Animation = "cut" | "slide" | "fade" | "layer";
+type Animation = 'cut' | 'slide' | 'fade' | 'layer';

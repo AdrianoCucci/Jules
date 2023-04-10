@@ -14,8 +14,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     PagesModule,
     ComponentsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

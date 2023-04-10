@@ -1,6 +1,12 @@
-<label *ngIf="label !== ''">{{label}}</label>
+<label *ngIf="label !== ''">{{ label }}</label>
 
-<input [type]="type" [required]="required" [placeholder]="placeholder" [(ngModel)]="value"
-(focus)="raisedLabel = true" (blur)="raisedLabel = !(value === '' || value === undefined)">
+<input
+  [type]="type"
+  [required]="required"
+  [placeholder]="placeholder"
+  [(ngModel)]="value"
+  (focus)="raisedLabel = true"
+  (blur)="raisedLabel = !(value === '' || value === undefined)"
+/>
 
-<span class="error">{{error}}</span>
+<span class="error">{{ error }}</span>

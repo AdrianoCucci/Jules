@@ -16,13 +16,11 @@ import { ImageViewComponent } from './images/image-view/image-view.component';
 import { ImageModalComponent } from './images/image-modal/image-modal.component';
 import { ImageCarouselComponent } from './images/carousel/image-carousel/image-carousel.component';
 import { CarouselImageComponent } from './images/carousel/carousel-image/carousel-image.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
 import { TextInputComponent } from './input/text-input/text-input.component';
 import { TextAreaComponent } from './input/text-input/text-area/text-area.component';
 import { ButtonComponent } from './input/button/button.component';
 import { LinkButtonComponent } from './input/button/link-button/link-button.component';
 import { ContentBlockComponent } from './content-block/content-block.component';
-import { SpotifyEmbedListComponent } from './spotify-embed-list/spotify-embed-list.component';
 
 const components = [
   NavigationComponent,
@@ -37,23 +35,16 @@ const components = [
   ImageModalComponent,
   ImageCarouselComponent,
   CarouselImageComponent,
-  ContactFormComponent,
   TextInputComponent,
   TextAreaComponent,
   ButtonComponent,
   LinkButtonComponent,
   ContentBlockComponent,
-  SpotifyEmbedListComponent
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    AppRoutingModule,
-    FormsModule,
-    FontAwesomeModule
-  ],
+  imports: [CommonModule, AppRoutingModule, FormsModule, FontAwesomeModule],
   declarations: components,
   exports: components,
 })
-export class ComponentsModule { }
+export class ComponentsModule {}

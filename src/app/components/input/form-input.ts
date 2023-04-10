@@ -1,32 +1,28 @@
 import { AppInput } from './input';
-import { Input, HostBinding, OnInit, Output, EventEmitter, Directive } from '@angular/core';
+import {
+  Input,
+  HostBinding,
+  Output,
+  EventEmitter,
+  Directive,
+} from '@angular/core';
 
 @Directive()
-export abstract class FormInput<T> extends AppInput implements OnInit {
-  @Input() public required: boolean;
+export abstract class FormInput<T> extends AppInput {
+  @Input() public required: boolean = false;
 
-  protected _value: T;
+  protected _value?: T;
 
-  @Output() public readonly valueChange: EventEmitter<T>;
+  @Output() public readonly valueChange: EventEmitter<T> =
+    new EventEmitter<T>();
 
-  @HostBinding("class.invalid") private _invalid: boolean;
+  @HostBinding('class.invalid') private _invalid: boolean = false;
 
-  protected _error: string;
+  protected _error?: string;
 
   public constructor(type?: string, value?: T) {
-    super(type);
+    super(type ?? 'text');
     this._value = value;
-
-    this.required = false;
-    this.valueChange = new EventEmitter<T>();
-  }
-
-  ngOnInit() {
-    super.ngOnInit();
-
-    if(!this.required) {
-      this.required = String(this.required) !== "false";
-    }
   }
 
   public validate(): boolean {
@@ -38,15 +34,15 @@ export abstract class FormInput<T> extends AppInput implements OnInit {
 
   protected abstract onValidate(): boolean;
 
-  public get value(): T {
+  public get value(): T | undefined {
     return this._value;
   }
-  @Input() public set value(value: T) {
+  @Input() public set value(value: T | undefined) {
     this._value = value;
     this.valueChange.emit(value);
   }
 
-  public get error(): string {
+  public get error(): string | undefined {
     return this._error;
   }
 }
