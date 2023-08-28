@@ -7,6 +7,10 @@
   app-column {
     padding: 2% 5% 5% 5%;
 
+    app-upcoming-track {
+      width: max-content;
+    }
+
     div {
       display: flex;
       flex-flow: column;
@@ -29,7 +33,13 @@
 }
 
 @include mobileView() {
-  :host app-column div {
-    width: 100%;
+  :host app-column {
+    app-upcoming-track {
+      width: auto;
+    }
+
+    div {
+      width: 100%;
+    }
   }
 }

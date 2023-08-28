@@ -1,0 +1,38 @@
+<div class="content-wrapper">
+  <div class="header">
+    <span class="upcoming-text">Upcoming Release</span>
+  </div>
+
+  <div class="image-wrapper box-shadow-fade hover-grow">
+    <img
+      [src]="upcomingTrack.coverImageSrc"
+      [alt]="upcomingTrack.title + ' album cover'"
+    />
+  </div>
+
+  <div class="footer">
+    <h2 class="title text-shadow-fade">{{ upcomingTrack.title }}</h2>
+
+    <div class="release-date">
+      <span class="meta">Release date:&nbsp;</span>
+      <span class="data">
+        <strong>{{ upcomingTrack.releaseDate | date }}</strong>
+      </span>
+    </div>
+
+    <div class="audio-content">
+      <audio controls="true" [src]="upcomingTrack.audioSrc"></audio>
+    </div>
+
+    <div class="presave-content">
+      <a
+        [href]="upcomingTrack.presaveUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button"
+      >
+        PRE-SAVE NOW!
+      </a>
+    </div>
+  </div>
+</div>

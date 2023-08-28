@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Title, Meta } from '@angular/platform-browser';
 import { Page } from '../page';
 
 @Component({
@@ -8,8 +7,8 @@ import { Page } from '../page';
   styleUrls: ['./page-not-found.page.scss'],
 })
 export class PageNotFoundPage extends Page {
-  public constructor(title: Title, meta: Meta) {
-    super(title, meta);
+  public constructor() {
+    super();
     this.setTitle('Page Not Found');
   }
 }

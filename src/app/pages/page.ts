@@ -1,13 +1,11 @@
-import { Title, Meta } from '@angular/platform-browser';
+import { inject } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 export abstract class Page {
-  protected _title: Title;
-  protected _meta: Meta;
+  protected readonly _title: Title = inject(Title);
+  protected readonly _meta: Meta = inject(Meta);
 
-  protected constructor(title: Title, meta: Meta) {
-    this._title = title;
-    this._meta = meta;
-
+  protected constructor() {
     window.scroll({ top: 0 });
     this._meta.addTag({ name: 'description' });
   }

@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
-import { Page } from '../page';
-import { Title, Meta } from '@angular/platform-browser';
+import { Component, inject } from '@angular/core';
 import {
-  SpotifySource,
   SpotifyEmbedService,
-} from 'src/app/services/spotify-embed-service';
+  SpotifySource,
+} from 'src/app/services/spotify-embed.service';
+import { Page } from '../page';
 
 @Component({
   selector: 'app-music-page',
@@ -14,17 +13,17 @@ import {
 export class MusicPage extends Page {
   public readonly spotifySources: SpotifySource[];
 
-  public constructor(
-    title: Title,
-    meta: Meta,
-    spotifyService: SpotifyEmbedService
-  ) {
-    super(title, meta);
+  private readonly _spotifyService: SpotifyEmbedService =
+    inject(SpotifyEmbedService);
+
+  public constructor() {
+    super();
 
     this.setTitle('Music');
     this.setMetaDescription(
       'Stream Jules\' first single, "Don\'t Wanna Be", available now on all streaming platforms. Links can be found here! New music is dropping from Jules very soon!'
     );
-    this.spotifySources = spotifyService.sources;
+
+    this.spotifySources = this._spotifyService.sources;
   }
 }

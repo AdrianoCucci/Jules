@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Page } from '../page';
-import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home-page',
@@ -8,8 +7,8 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage extends Page {
-  public constructor(title: Title, meta: Meta) {
-    super(title, meta);
+  public constructor() {
+    super();
 
     this.setTitle('Home');
     this.setMetaDescription(

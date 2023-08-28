@@ -141,3 +141,20 @@ body {
     }
   }
 }
+
+.button {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  color: var(--color-tertiary);
+  padding: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  border: solid var(--color-tertiary) 2px;
+  border-radius: 10px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: var(--color-tertiary);
+    color: var(--color-secondary);
+  }
+}

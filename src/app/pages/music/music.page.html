@@ -8,16 +8,20 @@
 
 <app-row class="padding">
   <app-column h-align="center" v-align="center">
+    <div class="upcoming-release">
+      <app-upcoming-track></app-upcoming-track>
+    </div>
+
     <div
       *ngFor="let source of spotifySources; index as i;"
-      class="song-showcase hover-grow"
+      class="song-showcase"
       [ngClass]="{'latest': i === 0}"
     >
       <span *ngIf="i === 0" class="text-shadow-fade latest-text"
         >Latest Release!</span
       >
 
-      <div class="image-wrapper box-shadow-fade">
+      <div class="image-wrapper box-shadow-fade hover-grow">
         <img [src]="source.imageUrl" [alt]="source.title + ' album cover'" />
       </div>
 
