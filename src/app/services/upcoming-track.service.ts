@@ -6,7 +6,7 @@ import { UpcomingTrack } from '../interfaces/upcoming-track';
 })
 export class UpcomingTrackService {
   public readonly upcomingTrack: UpcomingTrack = {
-    title: `I'm perfect`,
+    title: `I'mPerfect - Jules & F.Y.D.I`,
     coverImageSrc: 'assets/images/album-covers/im-perfect.jpg',
     audioSrc: 'assets/audio/ImPerfect_Jules_and_FYDI_teaserfinal.mp3',
     releaseDate: new Date(2023, 8, 22),

@@ -77,6 +77,13 @@
       .audio-content {
         margin-bottom: 40px;
 
+        .preview-text {
+          display: inline-block;
+          margin-bottom: 8px;
+          color: var(--color-dark-contrast);
+          letter-spacing: 1px;
+        }
+
         audio {
           width: 100%;
         }

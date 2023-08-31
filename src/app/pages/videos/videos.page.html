@@ -6,15 +6,22 @@
   class="fixed-background-image"
 />
 
-<app-row *ngFor="let url of youTubeUrls">
+<app-row *ngFor="let source of sources">
   <app-column class="padding">
-    <div class="embed box-shadow-fade hover-grow">
+    <div class="embed box-shadow-fade hover-grow" [ngSwitch]="source.origin">
       <iframe
-        [src]="url"
+        *ngSwitchCase="'youtube'"
+        [src]="source.url"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
+
+      <video
+        *ngSwitchCase="'assets'"
+        controls="true"
+        [src]="source.url"
+      ></video>
     </div>
   </app-column>
 </app-row>
