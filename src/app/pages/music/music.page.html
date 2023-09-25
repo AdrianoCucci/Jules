@@ -8,29 +8,21 @@
 
 <app-row class="padding">
   <app-column h-align="center" v-align="center">
-    <div class="upcoming-release">
-      <app-upcoming-track></app-upcoming-track>
+    <div class="primary-song">
+      <app-primary-song></app-primary-song>
     </div>
 
-    <div
-      *ngFor="let source of spotifySources; index as i;"
-      class="song-showcase"
-      [ngClass]="{'latest': i === 0}"
-    >
-      <span *ngIf="i === 0" class="text-shadow-fade latest-text"
-        >Latest Release!</span
-      >
-
+    <div *ngFor="let song of songs;" class="song-showcase">
       <div class="image-wrapper box-shadow-fade hover-grow">
-        <img [src]="source.imageUrl" [alt]="source.title + ' album cover'" />
+        <img [src]="song.coverImageSrc" [alt]="song.title + ' album cover'" />
       </div>
 
       <div class="content-wrapper">
-        <h2 class="title text-shadow-fade">{{source.title}}</h2>
-        <div class="spotify-embed-wrapper box-shadow-fade">
+        <h2 class="title text-shadow-fade">{{song.title}}</h2>
+        <div *ngIf="song.embedUrl" class="embed-wrapper box-shadow-fade">
           <iframe
             style="border-radius: 12px"
-            [src]="source.url"
+            [src]="song.embedUrl"
             width="100%"
             height="152"
             frameborder="0"

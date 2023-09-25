@@ -1,0 +1,38 @@
+<div *ngIf="song" class="content-wrapper">
+  <div class="header">
+    <span class="release-text"
+      >{{ songIsReleased ? "Latest" : "Upcoming" }} Release</span
+    >
+  </div>
+
+  <div class="image-wrapper box-shadow-fade hover-grow">
+    <img [src]="song.coverImageSrc" [alt]="song.title + ' album cover'" />
+  </div>
+
+  <div class="footer">
+    <h2 class="title text-shadow-fade">{{ song.title }}</h2>
+
+    <div *ngIf="!songIsReleased && song.releaseDate" class="release-date">
+      <span class="meta">Release date:&nbsp;</span>
+      <span class="data">
+        <strong>{{ song.releaseDate | date }}</strong>
+      </span>
+    </div>
+
+    <div *ngIf="song.audio" class="audio-content">
+      <span class="preview-text">PREVIEW:</span>
+      <audio controls="true" [src]="song.audio.source"></audio>
+    </div>
+
+    <div class="view-content">
+      <a
+        [href]="song.viewUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button"
+      >
+        {{ songIsReleased ? "LISTEN HERE!" : "PRE-SAVE NOW!" }}
+      </a>
+    </div>
+  </div>
+</div>

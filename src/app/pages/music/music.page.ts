@@ -1,8 +1,6 @@
 import { Component, inject } from '@angular/core';
-import {
-  SpotifyEmbedService,
-  SpotifySource,
-} from 'src/app/services/spotify-embed.service';
+import { Song } from 'src/app/interfaces/song';
+import { SongService } from 'src/app/services/song.service';
 import { Page } from '../page';
 
 @Component({
@@ -11,10 +9,8 @@ import { Page } from '../page';
   styleUrls: ['./music.page.scss'],
 })
 export class MusicPage extends Page {
-  public readonly spotifySources: SpotifySource[];
-
-  private readonly _spotifyService: SpotifyEmbedService =
-    inject(SpotifyEmbedService);
+  public readonly songs: Song[];
+  private readonly _songService: SongService = inject(SongService);
 
   public constructor() {
     super();
@@ -24,6 +20,8 @@ export class MusicPage extends Page {
       'Stream Jules\' first single, "Don\'t Wanna Be", available now on all streaming platforms. Links can be found here! New music is dropping from Jules very soon!'
     );
 
-    this.spotifySources = this._spotifyService.sources;
+    const songs = this._songService.getSongs();
+    const latestSong = this._songService.getLatestSong();
+    this.songs = songs.filter((s: Song) => s !== latestSong);
   }
 }
