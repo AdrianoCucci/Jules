@@ -16,6 +16,7 @@ export class VideoEmbedService {
 
   constructor() {
     this.sources = [
+      this.createVideoSource('youtube', 'gAq6DNthSpg'),
       this.createVideoSource('youtube', 'u9J-wqZFbb8'),
       this.createVideoSource('youtube', 'RVkbzx6xk38'),
       this.createVideoSource('youtube', 'ZtCZfWioDrY'),
