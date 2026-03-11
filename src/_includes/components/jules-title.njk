@@ -1,0 +1,11 @@
+{% macro julesTitle(tag = "span") %}
+    {% if tag == "h1" %}
+        <h1 class="m-none fs-h1 txt-upper txt-dark txt-shadow-primary-br" aria-label="Jules">
+            Jule<span class="flip-x txt-shadow-primary-bl">z</span>
+        </h1>
+    {% else %}
+        <span class="fs-h3 font-heading txt-shadow-br txt-light txt-upper" aria-label="Jules">
+            Jule<span class="flip-x txt-shadow-bl">z</span>
+        </span>
+    {% endif %}
+{% endmacro %}

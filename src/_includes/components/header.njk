@@ -1,0 +1,17 @@
+<header>
+    <div id="main-nav-container" role="menubar" tabindex="-1">
+        <button
+          id="btn-mobile-menu"
+          aria-label="Main Menu"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="main-menu-container"
+        >
+            <div class="hamburger-icon" role="presentation"></div>
+        </button>
+
+        {% include "components/page-nav.njk" %}
+
+        {% include "components/social-nav.njk" %}
+    </div>
+</header>

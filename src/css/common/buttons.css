@@ -1,0 +1,16 @@
+.button {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  color: var(--color-tertiary);
+  padding: var(--spacing-4);
+  text-decoration: none;
+  font-weight: 700;
+  border: solid var(--color-tertiary) 2px;
+  border-radius: var(--border-radius-2);
+  transition: 0.3s;
+
+  &:hover {
+    background-color: var(--color-tertiary);
+    color: var(--color-secondary);
+  }
+}

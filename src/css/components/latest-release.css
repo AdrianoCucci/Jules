@@ -1,0 +1,9 @@
+div.latest-release {
+  width: max-content;
+  background-color: rgba(var(--color-dark-rgb), 0.6);
+
+  div.image-wrapper {
+    width: 600px;
+    border-radius: inherit;
+  }
+}

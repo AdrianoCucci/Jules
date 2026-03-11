@@ -1,0 +1,16 @@
+{% from "components/jules-title.njk" import julesTitle %}
+
+<footer class="mt-lg-percent">
+    <div class="flex flex-row-wrap flex-items-center flex-justify-around gap-1 p-6 bg-dark-translucent">
+        {{ julesTitle() }}
+
+        <a href="mailto:realjulesmusic@gmail.com" class="flex flex-items-center gap-1 p-3 txt-decor-none bg-light fs-b4 font-bold rounded-4 hover-grow">
+            <i class="fa fa-envelope"></i>
+            <span>realjulesmusic@gmail.com</span>
+        </a>
+    </div>
+
+    <div class="p-4 bg-dark txt-light txt-center">
+        <p class="m-none">© {% currentYear %} - All rights reserved.</p>
+    </div>
+</footer>

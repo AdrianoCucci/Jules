@@ -1,0 +1,40 @@
+---
+layout: "layouts/base.njk"
+eleventyNavigation:
+  key: "Music"
+  icon: "fa fa-music"
+  order: 2
+
+metaTitle: Music
+bgImage: "assets/images/photos/standing-with-phone-2.jpg"
+cssFiles:
+  - "css/music.css"
+  - "css/components/latest-release.css"
+---
+
+<h1 class="m-none fs-h1 txt-light txt-shadow-br" aria-label="Jules">Music</h1>
+
+{% if musicTracks.latest %}
+  <section id="latest-release" class="flex flex-justify-center mb-15">
+    {% include "components/latest-release.njk" %}
+  </section>
+{% endif %}
+
+{% if musicTracks.nonLatest %}
+  <section id="previous-releases">
+    <ul class="flex flex-row-wrap flex-justify-center gap-4 plain-list">
+      {% for track in musicTracks.nonLatest %}
+        <li class="bg-dark-translucent rounded-4 p-6">
+          <div class="image-wrapper rounded-4 shadow-br hover-grow">
+            <img src="{{ track.coverImageSrc }}" alt="{{ track.title }} album cover" class="rounded-4 ratio-1-1"/>
+          </div>
+
+          <div class="track-content">
+            <h2 class="mt-none txt-shadow-br">{{ track.title }}</h2>
+            <iframe width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" class="rounded-2 shadow-br" src="{{ track.embedLink }}"></iframe>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}

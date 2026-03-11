@@ -1,0 +1,71 @@
+.fs-h1 {
+  font-size: calc(1rem + 8vmax);
+}
+
+.fs-h3 {
+  font-size: calc(1rem + 5vmax);
+}
+
+.fs-b2 {
+  font-size: 2rem;
+}
+
+.fs-b4 {
+  font-size: 1.25rem;
+}
+
+.txt-dark {
+  color: var(--color-dark);
+}
+
+.txt-light {
+  color: var(--color-light);
+}
+
+.txt-upper {
+  text-transform: uppercase;
+}
+
+.txt-shadow-br {
+  text-shadow: var(--color-dark) 0.075em 0.075em 1px;
+}
+
+.txt-shadow-bl {
+  text-shadow: var(--color-dark) -0.075em 0.075em 1px;
+}
+
+.txt-shadow-primary-br {
+  text-shadow: var(--color-primary) 0.075em 0.075em 1px;
+}
+
+.txt-shadow-primary-bl {
+  text-shadow: var(--color-primary) -0.075em 0.075em 1px;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-decor-none {
+  text-decoration: none;
+}
+
+.txt-on-primary {
+  color: var(--color-primary-contrast);
+}
+
+.font-heading {
+  font-family: var(--font-family-headings);
+}
+
+.font-body {
+  font-family: var(--font-family-body);
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.letter-spacing-normal {
+  letter-spacing: normal;
+}

@@ -1,0 +1,12 @@
+<nav class="page-nav">
+    <ul>
+        {%- for navItem in collections.all | eleventyNavigation %}
+            <li>
+                <a href="{{ navItem.url }}"{% if navItem.url == page.url %} class="active" aria-current="page"{% endif %}>
+                    <i class="{{ navItem.icon }}"></i>
+                    <span>{{ navItem.title }}</span>
+                </a>
+            </li>
+        {%- endfor %}
+    </ul>
+</nav>

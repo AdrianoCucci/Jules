@@ -1,0 +1,152 @@
+.m-none {
+  margin: 0;
+}
+
+.mt-none {
+  margin-top: 0;
+}
+
+.mt-8 {
+  margin-top: var(--spacing-8);
+}
+
+.mb-15 {
+  margin-bottom: var(--spacing-15);
+}
+
+.mb-none {
+  margin-bottom: 0;
+}
+
+.mb-sm-percent {
+  margin-bottom: var(--spacing-small-percent);
+}
+
+.mb-md-percent {
+  margin-bottom: var(--spacing-medium-percent);
+}
+
+.mb-lg-percent {
+  margin-bottom: var(--spacing-large-percent);
+}
+
+.mt-lg-percent {
+  margin-top: var(--spacing-large-percent);
+}
+
+.mx-lg-percent {
+  margin-left: var(--spacing-large-percent);
+  margin-right: var(--spacing-large-percent);
+}
+
+.py-md-percent {
+  padding-top: var(--spacing-medium-percent);
+  padding-bottom: var(--spacing-medium-percent);
+}
+
+.p-1 {
+  padding: var(--spacing-1);
+}
+.p-2 {
+  padding: var(--spacing-2);
+}
+.p-3 {
+  padding: var(--spacing-3);
+}
+.p-4 {
+  padding: var(--spacing-4);
+}
+.p-5 {
+  padding: var(--spacing-5);
+}
+.p-6 {
+  padding: var(--spacing-6);
+}
+.p-7 {
+  padding: var(--spacing-7);
+}
+.p-8 {
+  padding: var(--spacing-8);
+}
+
+.p-sm-percent {
+  padding: var(--spacing-small-percent);
+}
+
+.p-md-percent {
+  padding: var(--spacing-medium-percent);
+}
+
+.p-l-percent {
+  padding: var(--spacing-large-percent);
+}
+
+.px-l-percent {
+  padding-left: var(--spacing-large-percent);
+  padding-right: var(--spacing-large-percent);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-items-center {
+  align-items: center;
+}
+
+.flex-justify-end {
+  justify-content: flex-end;
+}
+
+.flex-justify-between {
+  justify-content: space-between;
+}
+
+.flex-justify-around {
+  justify-content: space-around;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-row-wrap {
+  flex-flow: row wrap;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.gap-1 {
+  gap: var(--gap-1);
+}
+
+.gap-2 {
+  gap: var(--gap-2);
+}
+
+.gap-3 {
+  gap: var(--gap-3);
+}
+
+.gap-4 {
+  gap: var(--gap-4);
+}
+
+.flip-x {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+.max-w-full {
+  max-width: 100%;
+}

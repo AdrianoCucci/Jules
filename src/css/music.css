@@ -1,0 +1,37 @@
+img.fullscreen-background-image {
+  height: 140vmax;
+}
+
+section#previous-releases {
+  ul li {
+    display: flex;
+    gap: var(--spacing-10);
+    color: var(--color-light);
+    min-width: 33%;
+
+    div.image-wrapper img {
+      width: clamp(150px, 25vw, 300px);
+    }
+
+    div.track-content {
+      flex: 1;
+      min-width: 400px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+
+      div.image-wrapper img {
+        width: 100%;
+      }
+
+      div.track-content {
+        min-width: unset;
+      }
+
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+}

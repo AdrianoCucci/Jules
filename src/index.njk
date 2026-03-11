@@ -1,0 +1,17 @@
+---
+layout: "layouts/base.njk"
+eleventyNavigation:
+  key: "Home"
+  icon: "fa fa-home"
+  order: 1
+
+metaTitle: Home
+bgImage: "assets/images/photos/standing-with-phone-1.jpg"
+cssFiles:
+  - "css/components/latest-release.css"
+---
+
+{% from "components/jules-title.njk" import julesTitle %}
+{{ julesTitle("h1") }}
+
+{% include "components/latest-release.njk" %}

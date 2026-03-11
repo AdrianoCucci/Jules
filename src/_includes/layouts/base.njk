@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Jules | {{ metaTitle }}</title>
+    <base href="/"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+/>
+    <link rel="stylesheet" href="css/common/global.css"/>
+    <link rel="stylesheet" href="css/components/navigation.css"/>
+
+    {% for cssFile in cssFiles %}
+      <link rel="stylesheet" href="{{ cssFile }}"/>
+    {% endfor %}
+  </head>
+
+  <body class="flex flex-col flex-justify-between">
+    {% include "components/header.njk" %}
+
+    <img src="{{ bgImage }}" role="presentation" class="fullscreen-background-image"/>
+
+    <main class="px-l-percent">
+      {{ content | safe }}
+    </main>
+
+    {% include "components/footer.njk" %}
+
+    <script src="js/mobile-menu.js"></script>
+  </body>
+</html>

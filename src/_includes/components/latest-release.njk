@@ -1,0 +1,15 @@
+<div class="latest-release max-w-full p-8 rounded-4">
+    <h2 class="mt-none bg-primary p-sm-percent rounded-2 txt-lg txt-dark txt-center font-body letter-spacing-normal">Latest Release</h2>
+
+    <div class="image-wrapper max-w-full ratio-6-5 shadow-br hover-grow">
+        <img src="{{ musicTracks.latest.coverImageSrc }}" alt="{{ musicTracks.latest.coverImageSrc }} album cover" class="rounded-4"/>
+    </div>
+
+    <h3 class="fs-b2 txt-light txt-shadow-br">{{ musicTracks.latest.title }}</h3>
+
+    {% if musicTracks.latest.externalLink %}
+        <div class="txt-center">
+            <a href="{{ musicTracks.latest.externalLink }}" class="button" target="_blank" rel="noopener noreferrer">LISTEN HERE!</a>
+        </div>
+    {% endif %}
+</div>
